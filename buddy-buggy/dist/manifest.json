@@ -1,11 +1,11 @@
 {
   "manifest_version": 3,
-  "name": "Buddy Buggy",
+  "name": "Buggy Buddy",
   "description": "shopping extension",
   "version": "1.0.0",
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Buddy Buggy"
+    "default_title": "Buggy Buddy"
   },
   "host_permissions": [
     "<all_urls>"
@@ -28,6 +28,6 @@
     "service_worker": "background.js"
   },
   "icons": {
-    "64": "buggyIcon.png"
+    "64": "./icons/buggyIcon.png"
   }
 }
