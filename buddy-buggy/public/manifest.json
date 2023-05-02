@@ -7,8 +7,27 @@
     "default_popup": "popup.html",
     "default_title": "Buddy Buggy"
   },
+  "host_permissions": [
+    "<all_urls>"
+  ],
   "permissions": [
-    "scripting"
-  ]
-
+    "activeTab",
+    "tabs",
+    "webNavigation",
+    "webRequest",
+    "storage",
+    "notifications"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "64": "buggyIcon.png"
+  }
 }
