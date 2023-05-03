@@ -1,5 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
 .App {
   text-align: center;
+}
+.title {
+  border: 1px solid lightgray;
+  font-family: 'Courgette', cursive;
+  font-size: medium;
+}
+.buggyPopUpLogo {
+  height: 30px;
+  float: left;
+  transform: translate(80px, 20px);
 }
 .bottomNavBar {
   position: fixed;
