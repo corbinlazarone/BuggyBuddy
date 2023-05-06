@@ -26,5 +26,9 @@
   ],
   "background": {
     "service_worker": "background.js"
+  },
+  "icons": {
+    "64": "./icons/buggyBuddy(64px).png",
+    "128": "./icons/buggyBuddy(128px).png"
   }
 }

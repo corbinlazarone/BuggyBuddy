@@ -14,7 +14,7 @@ const chromeNotfication = () => {
     // Display a notification or take other actions as needed
     chrome.notifications.create({
         type: 'basic',
-        iconUrl: './icons/icon.png',
+        iconUrl: './icons/notfication.png',
         title: 'Shopping Links Found',
         message: 'This website has things you can purchase!',
     });
