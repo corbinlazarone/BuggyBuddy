@@ -3,7 +3,9 @@ import React from "react";
 function Home() {
 
     return (
-        null
+        <div>
+            <h1>Welcom to the HomePage!</h1>
+        </div>
     );
 }
 

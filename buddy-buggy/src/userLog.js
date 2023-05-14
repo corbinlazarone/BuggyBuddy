@@ -3,7 +3,9 @@ import React from "react";
 function UserLogIn() {
 
     return (
-        null
+        <div>
+            <h1>Welcome to the Login Page!</h1>
+        </div>
     );
 }
 

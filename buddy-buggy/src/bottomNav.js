@@ -2,6 +2,8 @@ import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person';
+import Home from "./home.js"
+import UserLogIn from "./userLog.js"
 import { useState } from 'react'
 
 function BottomNav() {
