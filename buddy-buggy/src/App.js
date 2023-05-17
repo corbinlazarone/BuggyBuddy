@@ -14,8 +14,8 @@ function App() {
           <img className='buggyPopUpLogo' src={logo} alt='fast cart logo' />
         </div>
         <div className='closeIcon'>
-          <IconButton color="primary">
-            <CloseIcon size='large' onClick={() => {window.close()}}/>
+          <IconButton color="primary" onClick={() => { window.close() }}>
+            <CloseIcon size='large'/>
           </IconButton>
         </div>
       </header>

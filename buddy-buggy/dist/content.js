@@ -1,6 +1,6 @@
 // Search for shopping links on the website
-const shoppingLinks = document.querySelectorAll('a[href*=shop], button.buy, button.add-to-cart');
-
+// const shoppingLinks = document.querySelectorAll('a[href*=shop], button.buy, button.add-to-cart');
+const shoppingLinks = document.querySelectorAll('.buy-now-button')
 // If there are shopping links, send a message to the background script
 if (shoppingLinks.length > 0) {
     chrome.runtime.sendMessage({ hasShoppingLinks: true });
