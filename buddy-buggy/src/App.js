@@ -1,29 +1,20 @@
 import BottomNav from './bottomNav';
-import logo from './icons/buggyBuddyLogo.png'
-import CloseIcon from '@mui/icons-material/Close';
-import { IconButton } from '@mui/material';
-import {useState} from 'react'
 import './css/App.css'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Userlogin';
+import UserLogIn from './Home';
+import Header from './header';
 
-function App() {
+export default function App() {
 
   return (
     <div className='App'>
-      <header className='title' style={{height: 60}}>
-        <div className='buggyLogoContainer'>
-          <img className='buggyPopUpLogo' src={logo} alt='fast cart logo' />
-        </div>
-        <div className='closeIcon'>
-          <IconButton color="primary" onClick={() => { window.close() }}>
-            <CloseIcon size='large'/>
-          </IconButton>
-        </div>
-      </header>
-      <div className='bottomNavBar'>
-        <BottomNav />
-      </div>
+      <Header />
+      <BottomNav />
+      <Routes>
+        <Route path='/home' element={<UserLogIn />} />
+        <Route path='/popup.html' element={<Home />} />
+      </Routes>
     </div>
   );
 }
-
-export default App;

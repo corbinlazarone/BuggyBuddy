@@ -1,17 +1,19 @@
-/**
- *  Listen to any new tabs being opend and prompt user
- *  to add to Buggy Buddy.
- */
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (request.message === "get_tab_url") {
+        if (sender.url && sender.url.includes('cart')) {
+            chromeNotification()
+            console.log(`Link: ${sender.url}`)
+            sendResponse({ tabUrl: sender.url })
 
-// Listen for messages from the content script
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    if (message.hasShoppingLinks) {
-        chromeNotfication();
-        console.log(`links: ${sender.url}`)
+            // put cart url in chrome storage.
+            chrome.storage.sync.set({ 'dataValue': sender.url })
+        }
     }
-});
+})
 
-const chromeNotfication = () => {
+
+
+const chromeNotification = () => {
     // Display a notification or take other actions as needed
     chrome.notifications.create({
         type: 'basic',
