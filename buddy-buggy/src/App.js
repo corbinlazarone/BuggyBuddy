@@ -10,11 +10,11 @@ export default function App() {
   return (
     <div className='App'>
       <Header />
-      <BottomNav />
       <Routes>
         <Route path='/home' element={<UserLogIn />} />
         <Route path='/popup.html' element={<Home />} />
       </Routes>
+      <BottomNav />
     </div>
   );
 }

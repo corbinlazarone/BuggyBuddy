@@ -12,7 +12,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 })
 
 
-
 const chromeNotification = () => {
     // Display a notification or take other actions as needed
     chrome.notifications.create({

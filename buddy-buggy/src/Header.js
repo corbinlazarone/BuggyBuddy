@@ -20,7 +20,7 @@ export default function Header() {
 
     return (
         <ThemeProvider theme={theme}>
-            <div className='header'>
+            <header className='header'>
                 <div className='buggyLogoContainer'>
                     <img className='buggyPopUpLogo' src={logo} alt='fast cart logo' />
                 </div>
@@ -29,7 +29,7 @@ export default function Header() {
                         <CloseIcon size='large' />
                     </IconButton>
                 </div>
-            </div>
+            </header>
         </ThemeProvider>
     )
 }
