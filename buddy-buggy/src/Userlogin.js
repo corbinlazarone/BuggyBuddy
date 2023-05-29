@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import logo from './icons/buggyBuddyCart.png'
 import './css/userLogIn.css'
 
 export default function Home() {
@@ -32,7 +33,10 @@ export default function Home() {
 
     return (
         <div className="login-container">
-            <h2>Login</h2>
+            <div className="bug-logo">
+                <img className='bug-icon' src={logo} alt="fast car logo" />
+            </div>
+            <h2 className="login-title">Login</h2>
             <form>
                 <div className="form-group">
                     <label htmlFor="username">Username</label>
@@ -42,7 +46,7 @@ export default function Home() {
                     <label htmlFor="password">Password</label>
                     <input type="password" id="password" />
                 </div>
-                <button type="submit">Login</button>
+                <button className="log-button" type="submit">Login</button>
             </form>
         </div>
     );
