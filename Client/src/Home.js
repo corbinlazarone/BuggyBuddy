@@ -17,7 +17,7 @@ export default function UserLogIn() {
         })
 
         setFavicon(faviconURL(cartUrl))
-        // addObject(cartUrl, favicon)
+        addObject(cartUrl, favicon)
     })
 
     // find favIcon.
@@ -28,60 +28,78 @@ export default function UserLogIn() {
         return url.toString();
     }
 
-    // const addObject = (cartUrl, favicon) => {
-    //     if (carts < 5) {
-    //         const newObject = {
-    //             id: idCounter,
-    //             url: cartUrl,
-    //             favicon: favicon,
-    //         }
+    const addObject = (cartUrl, favicon) => {
+        if (carts < 5) {
+            const newObject = {
+                id: idCounter,
+                url: cartUrl,
+                favicon: favicon,
+            }
 
-    //         // Increase the ID counter for the next Object.
-    //         setIdCounter(idCounter + 1);
+            // Increase the ID counter for the next Object.
+            setIdCounter(idCounter + 1);
 
-    //         // Add the new Object to the array.
-    //         setCartData([...carts, newObject])
+            // Add the new Object to the array.
+            setCartData([...carts, newObject])
+        }
+    }
+
+    // const shoppingCarts = [
+    //     {
+    //         id: 1,
+    //         name: 'Amazon',
+    //         url: 'https://www.amazon.com',
+    //         favicon: 'https://www.amazon.com/favicon.ico',
+    //     },
+    //     {
+    //         id: 2,
+    //         name: 'eBay',
+    //         url: 'https://www.ebay.com',
+    //         favicon: 'https://www.ebay.com/favicon.ico',
+    //     },
+    //     {
+    //         id: 3,
+    //         name: 'Walmart',
+    //         url: 'https://www.walmart.com',
+    //         favicon: 'https://www.walmart.com/favicon.ico',
+    //     },
+    //     {
+    //         id: 4,
+    //         name: 'Target',
+    //         url: 'https://www.target.com',
+    //         favicon: 'https://www.target.com/favicon.ico',
+    //     },
+    //     {
+    //         id: 5,
+    //         name: 'Best Buy',
+    //         url: 'https://www.bestbuy.com',
+    //         favicon: 'https://www.bestbuy.com/favicon.ico',
+    //     },
+    //     {
+    //         id: 6,
+    //         name: 'Etsy',
+    //         url: 'https://www.etsy.com',
+    //         favicon: 'https://www.etsy.com/favicon.ico',
+    //     },
+    //     {
+    //         id: 7,
+    //         name: 'Etsy',
+    //         url: 'https://www.etsy.com',
+    //         favicon: 'https://www.etsy.com/favicon.ico',
+    //     },
+    //     {
+    //         id: 8,
+    //         name: 'Etsy',
+    //         url: 'https://www.etsy.com',
+    //         favicon: 'https://www.etsy.com/favicon.ico',
+    //     },
+    //     {
+    //         id: 9,
+    //         name: 'Etsy',
+    //         url: 'https://www.etsy.com',
+    //         favicon: 'https://www.etsy.com/favicon.ico',
     //     }
-    // }
-
-    const shoppingCarts = [
-        {
-            id: 1,
-            name: 'Amazon',
-            url: 'https://www.amazon.com',
-            favicon: 'https://www.amazon.com/favicon.ico',
-        },
-        {
-            id: 2,
-            name: 'eBay',
-            url: 'https://www.ebay.com',
-            favicon: 'https://www.ebay.com/favicon.ico',
-        },
-        {
-            id: 3,
-            name: 'Walmart',
-            url: 'https://www.walmart.com',
-            favicon: 'https://www.walmart.com/favicon.ico',
-        },
-        {
-            id: 4,
-            name: 'Target',
-            url: 'https://www.target.com',
-            favicon: 'https://www.target.com/favicon.ico',
-        },
-        {
-            id: 5,
-            name: 'Best Buy',
-            url: 'https://www.bestbuy.com',
-            favicon: 'https://www.bestbuy.com/favicon.ico',
-        },
-        {
-            id: 6,
-            name: 'Etsy',
-            url: 'https://www.etsy.com',
-            favicon: 'https://www.etsy.com/favicon.ico',
-        },
-    ];
+    // ];
     const [editMode, setEditMode] = useState(false);
 
     const toggleEditMode = () => {
@@ -103,7 +121,7 @@ export default function UserLogIn() {
             </button>
             <div className="container">
                 <div className="cart-list">
-                    {shoppingCarts.map((cart) => (
+                    {carts.slice(0, 8).map((cart) => (
                         <div key={cart.id} className="cart-wrapper">
                             <a
                                 href={cart.url}
