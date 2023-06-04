@@ -3,6 +3,9 @@ import { useState, useEffect } from "react";
 import logo from './icons/buggyBuddyCart.png'
 import './css/Home.css'
 
+// functions
+import { getTest } from "./functions/test";
+
 export default function UserLogIn() {
 
     const [cartUrl, setCartUrl] = useState('')
@@ -110,6 +113,21 @@ export default function UserLogIn() {
         const updatedCarts = carts.filter((cart) => cart.id !== id);
         setCartData(updatedCarts);
     };
+
+
+    // testing api call
+    const [test, setTest] = useState("Hello World");
+
+    useEffect(() => {
+        
+        getTest()
+            .then((response) => {
+                setTest(response.message);
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }, [])
 
     return (
         <div className="popup">
