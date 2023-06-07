@@ -20,9 +20,9 @@
 .env
 
 Api/node_modules/
-client/node_modules/
-api/.env
-client/.env
+Client/node_modules/
+Api/.env
+Client/.env
 
 npm-debug.log*
 yarn-debug.log*
