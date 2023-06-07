@@ -10,15 +10,11 @@ import {
 } from "@ant-design/icons";
 import NoContentPage from "./NoContentPage";
 import { useEffect, useState } from "react";
+import SignUpForm from "./SignUp";
 const { Header, Footer, Content } = Layout;
 
 export default function App() {
-
-  // const [pageLoaded, setPageLoaded] = useState(false);
-  // useEffect(() => {
-  //   setPageLoaded(true)
-  // }, [])
-
+  
   const navigate = useNavigate();
 
   return (
@@ -41,10 +37,11 @@ export default function App() {
       </Header>
       <Content className="content">
         <Routes>
-          <Route exact path="/profile" element={<NoContentPage />} />
+          <Route exact path="/profile" element={<SignUpForm />} />
           {/* profile */}
           <Route exact path="/popup.html" element={<Home />} />
           {/* Home page */}
+          <Route exact path="/noContent" element={<NoContentPage />} />
         </Routes>
       </Content>
       <Footer className="footer">

@@ -26,8 +26,8 @@
 }
 
 #profileButton {
-  background-color: purple;
-  border-color: purple;
+  background-color: #9c27b0;
+  background-color: #9c27b0;
   transition: all 0.3s;
 }
 #profileButton:hover {
@@ -37,8 +37,8 @@
 }
 
 #homeButton {
-  background-color: purple;
-  border-color: purple;
+  background-color: #9c27b0;
+  background-color: #9c27b0;
   transition: all 0.3s;
 }
 #homeButton:hover {
@@ -59,18 +59,3 @@
   width: 64px;
   transform: translate(-10px, -20px);
 }
-
-/* .page-loaded {
-  animation: pageLoadAnimation 1s ease-in-out;
-}
-
-@keyframes pageLoadAnimation {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-} */
