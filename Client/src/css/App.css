@@ -1,3 +1,76 @@
 .App {
   text-align: center;
 }
+
+.Header {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Content {
+  background-color: #f0f2f5;
+  padding: 20px;
+}
+
+.footer {
+  background-color: #fff;
+  padding: 20px;
+  border-top: 1px solid #e8e8e8;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#profileButton {
+  background-color: purple;
+  border-color: purple;
+  transition: all 0.3s;
+}
+#profileButton:hover {
+  background-color: purple;
+  border-color: purple;
+  transform: scale(1.2);
+}
+
+#homeButton {
+  background-color: purple;
+  border-color: purple;
+  transition: all 0.3s;
+}
+#homeButton:hover {
+  background-color: purple;
+  border-color: purple;
+  transform: scale(1.2);
+}
+
+.close-icon {
+  float: right;
+  height: 38px;
+  width: 38px;
+  transform: translate(10px, -10px);
+}
+
+.buggyPopUpLogo {
+  height: 64px;
+  width: 64px;
+  transform: translate(-10px, -20px);
+}
+
+/* .page-loaded {
+  animation: pageLoadAnimation 1s ease-in-out;
+}
+
+@keyframes pageLoadAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */

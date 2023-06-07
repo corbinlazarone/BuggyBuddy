@@ -47,6 +47,8 @@ export default function Home() {
                     <input type="password" id="password" />
                 </div>
                 <button className="log-button" type="submit">Login</button>
+
+                <p><em>Already a Member? Login</em></p>
             </form>
         </div>
     );

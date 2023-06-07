@@ -26,7 +26,6 @@ export default function BottomNav() {
 
     return (
         <ThemeProvider theme={theme}>
-            <footer>
                 <div className='bottomNavBar'>
                     <BottomNavigation className='container' value={value} onChange={(event, newValue) => setValue(newValue)}>
                         <BottomNavigationAction
@@ -45,7 +44,6 @@ export default function BottomNav() {
                         />
                     </BottomNavigation>
                 </div>
-            </footer>
         </ThemeProvider>
     );
 }
