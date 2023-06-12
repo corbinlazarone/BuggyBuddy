@@ -1,0 +1,41 @@
+.parent-container {
+    animation: fadeIn 1s ease;
+    background-color: #f0f2f5;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#list-container {
+    display: flex;
+    justify-content: center;
+}
+
+.checkout-button-container {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#checkout-button {
+    width: 150px;
+    background-color: #FFA500;
+    transition: all 0.3s;
+}
+
+#checkout-button {
+    background-color: orange;
+    transform: scale(1.2);
+}
+
+.product-list-title {
+    transform: translate(10px, 10px);
+}

@@ -1,5 +1,5 @@
 // db
-const { default: mongoose } = require('mongoose');
+const { mongoose } = require('mongoose');
 
 
 // Connect to db
@@ -19,4 +19,4 @@ const connectDB = async() =>{
     }
 }
 
-module.exports = {connectDB};
+module.exports = connectDB;

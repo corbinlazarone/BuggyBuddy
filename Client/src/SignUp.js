@@ -1,25 +1,30 @@
 import React, { useState } from "react";
 import { Layout, Form, Input, Button, Row, Col } from 'antd';
 import { Route, Routes, useNavigate } from "react-router-dom";
-import logo from "./icons/buggyBuddyCart.png";
 import "./css/SignUp.css";
 
 export default function SignUpForm() {
 
+  const [form] = Form.useForm();
+
+  // handle submit form
   const onFinish = (values) => {
     console.log("Received values: ", values);
+
+    form.resetFields();
   };
 
-  const [message, setMessage] = useState("Please enter your password");
-
-  const validatePassword = (rule, value, callback) => {
-    if (!/[A-Z]/.test(value)) {
-      callback('Password must contain at least one uppercase letter');
-    } else if (!/[!@#$%^&*]/.test(value)) {
-      callback('Password must contain at least one special character');
-    } else {
-      callback();
-    }
+  // validating password.
+  const validatePassword = (rule, value) => {
+    return new Promise((resolve, reject) => {
+      if (!/[A-Z]/.test(value)) {
+        reject('Password must contain at least one uppercase letter');
+      } else if (!/[!@#$%^&*]/.test(value)) {
+        reject('Password must contain at least one special character');
+      } else {
+        resolve();
+      }
+    });
   };
 
   const navigate = useNavigate();
@@ -29,6 +34,7 @@ export default function SignUpForm() {
       className="signup-form"
       name="signup-form"
       onFinish={onFinish}
+      form={form}
       style={{ width: "350x" }}
     >
       <Form.Item>
@@ -69,7 +75,7 @@ export default function SignUpForm() {
       </Form.Item>
       <Form.Item className="already-a-member">
         Already a Member? 
-        <a onClick={() => navigate("/noContent")}>
+        <a onClick={() => navigate("/login")}>
           Log in
         </a>
       </Form.Item>

@@ -8,18 +8,37 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.Content {
+.custom-content {
   background-color: #f0f2f5;
-  padding: 20px;
+  overflow-x: hidden;
+    overflow-y: overlay;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
 }
 
 .footer {
   background-color: #fff;
   padding: 20px;
   border-top: 1px solid #e8e8e8;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  position: initial;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -47,7 +66,7 @@
   transform: scale(1.2);
 }
 
-.close-icon {
+#close-icon {
   float: right;
   height: 38px;
   width: 38px;

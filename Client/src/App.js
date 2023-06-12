@@ -1,48 +1,53 @@
-import Home from "./content";
 import "./css/App.css";
 import logo from "./icons/buggyBuddyLogo.png";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import { Layout, Avatar, Button } from "antd";
-import {
-  UserOutlined,
-  HomeOutlined,
-  CloseCircleOutlined,
-} from "@ant-design/icons";
-import NoContentPage from "./NoContentPage";
+import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from "react";
+import { UserOutlined, HomeOutlined, CloseCircleOutlined, } from "@ant-design/icons";
+
+import NoContentPage from "./NoContentPage";
 import SignUpForm from "./SignUp";
+import LoginForm from "./LoginForm";
+import Profile from "./Profile";
+import ShoppingCartDetails from "./CartDetails";
+import Home from "./content";
+
 const { Header, Footer, Content } = Layout;
 
 export default function App() {
-  
+
   const navigate = useNavigate();
 
   return (
-    <Layout style={{ minHeight: "500px" }}>
+    <Layout style={{ height: '500px', maxWidth: '350px', }}>
       <Header className="Header">
         <img className="buggyPopUpLogo" src={logo} alt="fast cart logo" />
-          <Button
-            type="text"
-            className="close-icon"
-            onClick={() => {
-              window.close();
-            }}
-            icon={
-              <CloseCircleOutlined
-                type="close-circle"
-                style={{ fontSize: "28px" }}
-              />
-            }
-          />
+        <Button
+          type="text"
+          id="close-icon"
+          onClick={() => {
+            window.close();
+          }}
+          icon={
+            <CloseCircleOutlined
+              type="close-circle"
+              style={{ fontSize: "28px" }}
+            />
+          }
+        />
       </Header>
-      <Content className="content">
+      <Content className='custom-content'>
+        <div className='scroll-content'>
         <Routes>
-          <Route exact path="/profile" element={<SignUpForm />} />
-          {/* profile */}
-          <Route exact path="/popup.html" element={<Home />} />
-          {/* Home page */}
-          <Route exact path="/noContent" element={<NoContentPage />} />
-        </Routes>
+            <Route exact path="/profile" element={<Profile />} />
+            <Route exact path="/popup.html" element={<Home />} />
+            <Route exact path="/noContent" element={<NoContentPage />} />
+            <Route exact path='/login' element={<LoginForm />} />
+            <Route exact path='/signup' element={<SignUpForm />} />
+            <Route exact path='/cartDetails' element={<ShoppingCartDetails />} />
+          </Routes>
+        </div>
       </Content>
       <Footer className="footer">
         <Button
@@ -55,7 +60,7 @@ export default function App() {
         />
         <Button
           id="profileButton"
-          onClick={() => navigate("/profile")}
+          onClick={() => navigate("/cartDetails")}
           icon={<UserOutlined />}
           type="primary"
           shape="round"

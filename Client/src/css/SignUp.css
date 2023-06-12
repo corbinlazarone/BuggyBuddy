@@ -34,7 +34,7 @@
 
 #submit-signup {
     transition: all 0.3s;
-    background: #FFA500;
+    background-color: #FFA500;
     width: 150px;
 }
 #submit-signup:hover {

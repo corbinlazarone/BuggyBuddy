@@ -28,6 +28,30 @@ export default function Home() {
       url: "https://www.target.com",
       favicon: "https://www.target.com/favicon.ico",
     },
+    {
+      id: 5,
+      name: "Amazon",
+      url: "https://www.amazon.com",
+      favicon: "https://www.amazon.com/favicon.ico",
+    },
+    {
+      id: 6,
+      name: "eBay",
+      url: "https://www.ebay.com",
+      favicon: "https://www.ebay.com/favicon.ico",
+    },
+    {
+      id: 7,
+      name: "Walmart",
+      url: "https://www.walmart.com",
+      favicon: "https://www.walmart.com/favicon.ico",
+    },
+    {
+      id: 8,
+      name: "Target",
+      url: "https://www.target.com",
+      favicon: "https://www.target.com/favicon.ico",
+    },
   ];
 
   const cardWidth = 350 / 4 - 20; // determing the length of each card for cart holders.
@@ -40,7 +64,7 @@ export default function Home() {
       <div
         style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
       >
-        {shoppingItems.map((item, index) => (
+        {shoppingItems.slice(0, 8).map((item, index) => (
           <Card
             key={index}
             style={{
