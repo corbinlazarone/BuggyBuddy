@@ -1,5 +1,6 @@
 .signup-form {
     width: 350px;
+    height: 350px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -15,6 +16,10 @@
     width: 200px;
     padding: 0;
 }
+
+.ant-form-item-explain-error {
+    font-size: 12px;
+  }
 
 @keyframes fadeIn {
     0% {

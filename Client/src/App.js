@@ -1,11 +1,13 @@
-import "./css/App.css";
-import logo from "./icons/buggyBuddyLogo.png";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import { Layout, Avatar, Button } from "antd";
-import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from "react";
 import { UserOutlined, HomeOutlined, CloseCircleOutlined, } from "@ant-design/icons";
 
+// Styling
+import "./css/App.css";
+import logo from "./icons/buggyBuddyLogo.png";
+
+// Components
 import NoContentPage from "./NoContentPage";
 import SignUpForm from "./SignUp";
 import LoginForm from "./LoginForm";
@@ -60,7 +62,7 @@ export default function App() {
         />
         <Button
           id="profileButton"
-          onClick={() => navigate("/cartDetails")}
+          onClick={() => navigate("/signup")}
           icon={<UserOutlined />}
           type="primary"
           shape="round"

@@ -34,6 +34,10 @@
     background-color: transparent;
 }
 
+.scroll-content {
+  overflow: hidden;
+}
+
 .footer {
   background-color: #fff;
   padding: 20px;
