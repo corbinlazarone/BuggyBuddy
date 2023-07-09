@@ -9,7 +9,6 @@
 }
 
 .custom-content {
-  background-color: #f0f2f5;
   overflow-x: hidden;
     overflow-y: overlay;
   }
@@ -43,8 +42,10 @@
   padding: 20px;
   border-top: 1px solid #e8e8e8;
   position: initial;
+  height: 65px;
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-around;
 }
 
@@ -78,7 +79,7 @@
 }
 
 .buggyPopUpLogo {
-  height: 64px;
-  width: 64px;
-  transform: translate(-10px, -20px);
+  height: 48px;
+  width: 48px;
+  transform: translate(-10px, -15px);
 }

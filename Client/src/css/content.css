@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded');
+
 .all-content {
     animation: fadeIn 1s ease;
+}
+
+.cart-title {
+    font-family: 'Unbounded', sans-serif;
 }
 
 @keyframes fadeIn {

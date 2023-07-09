@@ -61,7 +61,7 @@ export default function Home() {
   return (
     <div className="all-content">
       <div className="user-buggys">
-        <h3>Corbin's Active Buggys</h3>
+        <p className="cart-title">Corbin's Active Buggys</p>
       </div>
       <div
         style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}

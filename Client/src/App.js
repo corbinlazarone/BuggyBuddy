@@ -5,7 +5,7 @@ import { UserOutlined, HomeOutlined, CloseCircleOutlined, } from "@ant-design/ic
 
 // Styling
 import "./css/App.css";
-import logo from "./icons/buggyBuddyLogo.png";
+import logo from "./icons/buggyBuddyCart.png";
 
 // Components
 import NoContentPage from "./NoContentPage";

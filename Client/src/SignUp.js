@@ -8,16 +8,19 @@ export default function SignUpForm() {
 
   // handle submit form
   const onFinish = (values) => {
-    if (values.password === values.confirmPassword) {
-      console.log("Received values:", values);
-      // Perform your logic to send the form data to the backend
-      form.resetFields();
-    } else {
-      // Handle the case when passwords do not match
-      form.setFields([
-        { name: "confirmPassword", errors: ["Passwords do not match"] },
-      ]);
-    }
+
+    console.log("Received Values: ", values)
+
+    // if (values.password === values.confirmPassword) {
+    //   console.log("Received values:", values);
+    //   // Perform your logic to send the form data to the backend
+    //   form.resetFields();
+    // } else {
+    //   // Handle the case when passwords do not match
+    //   form.setFields([
+    //     { name: "confirmPassword", errors: ["Passwords do not match"] },
+    //   ]);
+    // }
   };
 
   // validating password.
@@ -84,7 +87,7 @@ export default function SignUpForm() {
       >
         <Input.Password placeholder="Password" maxLength={50} />
       </Form.Item>
-      <Form.Item
+      {/* <Form.Item
         name="confirmPassword"
         dependencies={["password"]}
         rules={[
@@ -101,7 +104,7 @@ export default function SignUpForm() {
         style={{ height: "48px" }}
       >
         <Input.Password placeholder="Re-enter Password" maxLength={50} />
-      </Form.Item>
+      </Form.Item> */}
       <Form.Item>
         <Button id="submit-signup" type="primary" htmlType="submit">
           Sign Up

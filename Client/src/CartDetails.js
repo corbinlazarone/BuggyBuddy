@@ -47,7 +47,7 @@ export default function ShoppingCartDetails() {
 
   return (
     <div className="parent-container" style={{ textAlign: "center" }}>
-      <h3 className="cart-title">{pageTitle}</h3>
+      <p className="cart-title">{pageTitle}</p>
       <Input.Search
         placeholder="Search for a product"
         value={searchQuery}

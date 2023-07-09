@@ -3,6 +3,7 @@
     height: 350px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     flex-direction: column;
     animation: fadeIn 1s ease;
 }
